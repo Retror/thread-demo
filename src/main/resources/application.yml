@@ -1,0 +1,117 @@
+server:
+  port: 8098
+  servlet:
+    context-path: /dataprocess
+
+sysconfig:
+  #索引文件路径
+  indexFilePath: D:\lz\moapdata
+  #数据文件路径
+  dataFilePath: D:\lz\moapdata
+  moapListUrl: http://10.1.64.146/mdfs/v1.1/meta/list
+  moapDataUrl: http://10.1.64.146/mdfs/v1.1/data
+
+
+#https://www.php1.cn/detail/SpringBoot_Cong__d329711d.html
+data:
+  dataInfos:
+    #    - model: ECMWF_HR
+    #      element: HGT
+    #      list:
+    #        - HGT/1000
+    #        - HGT/925
+    #        - HGT/850
+    #        - HGT/700
+    #        - HGT/500
+    #        - HGT/400
+    #        - HGT/300
+    #        - HGT/200
+    #        - HGT/100
+    - { model: ECMWF_HR,element: HGT,list: [ HGT/1000,HGT/925,HGT/850,HGT/700,HGT/500,HGT/400,HGT/300,HGT/200,HGT/100 ] }
+#    - { model: ECMWF_HR,element: RAIN01,list: [ ] }
+#    - { model: ECMWF_HR,element: RAIN03,list: [ ] }
+#    - { model: ECMWF_HR,element: RAIN06,list: [ ] }
+#    - { model: ECMWF_HR,element: RAIN12,list: [ ] }
+#    - { model: ECMWF_HR,element: RAIN24,list: [ ] }
+#    - { model: ECMWF_HR,element: TMP_2M,list: [ ] }
+#    - { model: ECMWF_HR,element: DPT_2M,list: [ ] }
+#    - { model: ECMWF_HR,element: VIS,list: [ ] }
+#    - { model: ECMWF_HR,element: UGRD_10M,list: [ ] }
+#    - { model: ECMWF_HR,element: VGRD_10M,list: [ ] }
+#    - { model: ECMWF_HR,element: UGRD,list: [ UGRD/800 ] }
+#    - { model: ECMWF_HR,element: VGRD,list: [ VGRD/800 ] }
+#    - { model: ECMWF_HR,element: TCDC,list: [ ] }
+#    - { model: ECMWF_HR,element: LCDC,list: [ ] }
+#    - { model: ECMWF_HR,element: 10_METRE_WIND_GUST_IN_THE_LAST_3_HOURS_UNCLIPPED,list: [ ] }
+#    - { model: ECMWF_HR,element: 10_METRE_WIND_GUST_IN_THE_LAST_6_HOURS_UNCLIPPED,list: [ ] }
+#    - { model: ECMWF_HR,element: MAXIMUM_TEMPERATURE_AT_2_METRES_IN_THE_LAST_6_HOURS,list: [ ] }
+#    - { model: ECMWF_HR,element: MINIMUM_TEMPERATURE_AT_2_METRES_IN_THE_LAST_6_HOURS,list: [ ] }
+#
+#    - { model: GRAPES_MESO_HR,element: RAIN01,list: [ ] }
+#    - { model: GRAPES_MESO_HR,element: RAIN03,list: [ ] }
+#    - { model: GRAPES_MESO_HR,element: RAIN06,list: [ ] }
+#    - { model: GRAPES_MESO_HR,element: RAIN12,list: [ ] }
+#    - { model: GRAPES_MESO_HR,element: RAIN24,list: [ ] }
+#    - { model: GRAPES_MESO_HR,element: TMP,list: [ TMP/2M_ABOVE_GROUND ] }
+#    - { model: GRAPES_MESO_HR,element: RH,list: [ RH/2M_ABOVE_GROUND ] }
+#    - { model: GRAPES_MESO_HR,element: VIS,list: [ ] }
+#    - { model: GRAPES_MESO_HR,element: UGRD,list: [ UGRD/10M_ABOVE_GROUND,UGRD/800 ] }
+#    - { model: GRAPES_MESO_HR,element: VGRD,list: [ VGRD/10M_ABOVE_GROUND,VGRD/800 ] }
+#    - { model: GRAPES_MESO_HR,element: TCDC,list: [ ] }
+#    - { model: GRAPES_MESO_HR,element: LCDC,list: [ ] }
+#    - { model: GRAPES_MESO_HR,element: MAX_VGRD,list: [ MAX_VGRD/10M_ABOVE_GROUND ] }
+#    - { model: GRAPES_MESO_HR,element: MAX_UGRD,list: [ MAX_UGRD/10M_ABOVE_GROUND ] }
+#
+#    - { model: GRAPES_3KM,element: RAIN01,list: [ ] }
+#    - { model: GRAPES_3KM,element: RAIN03,list: [ ] }
+#    - { model: GRAPES_3KM,element: RAIN06,list: [ ] }
+#    - { model: GRAPES_3KM,element: RAIN12,list: [ ] }
+#    - { model: GRAPES_3KM,element: RAIN24,list: [ ] }
+#    - { model: GRAPES_3KM,element: TMP,list: [ TMP/2M_ABOVE_GROUND ] }
+#    - { model: GRAPES_3KM,element: RH,list: [ RH/2M_ABOVE_GROUND ] }
+#    - { model: GRAPES_3KM,element: VIS,list: [ ] }
+#    - { model: GRAPES_3KM,element: UGRD,list: [ UGRD/10M_ABOVE_GROUND,UGRD/800 ] }
+#    - { model: GRAPES_3KM,element: VGRD,list: [ VGRD/10M_ABOVE_GROUND,VGRD/800 ] }
+#    - { model: GRAPES_3KM,element: TCDC,list: [ TCDC/ATMOSPHERE_TOP] }
+#    - { model: GRAPES_3KM,element: LCDC,list: [ TCDC/ATMOSPHERE_TOP] }
+#    - { model: GRAPES_3KM,element: MAX_VGRD,list: [ MAX_VGRD/10M_ABOVE_GROUND ] }
+#    - { model: GRAPES_3KM,element: MAX_UGRD,list: [ MAX_UGRD/10M_ABOVE_GROUND ] }
+#
+#    - { model: SHANGHAI_MR,element: RAIN01,list: [ ] }
+#    - { model: SHANGHAI_MR,element: RAIN03,list: [ ] }
+#    - { model: SHANGHAI_MR,element: RAIN06,list: [ ] }
+#    - { model: SHANGHAI_MR,element: RAIN12,list: [ ] }
+#    - { model: SHANGHAI_MR,element: RAIN24,list: [ ] }
+#    - { model: SHANGHAI_MR,element: TMP,list: [ TMP/2M_ABOVE_GROUND ] }
+#    - { model: SHANGHAI_MR,element: RH,list: [ RH/2M_ABOVE_GROUND ] }
+#    - { model: SHANGHAI_MR,element: VIS,list: [ ] }
+#    - { model: SHANGHAI_MR,element: UGRD,list: [ UGRD/10M_ABOVE_GROUND ] }
+#    - { model: SHANGHAI_MR,element: VGRD,list: [ VGRD/10M_ABOVE_GROUND ] }
+#    - { model: SHANGHAI_MR,element: TCDC,list: [ TCDC/ENTIRE_ATMOSPHERE] }
+#
+#    - { model: BEIJING_MR,element: RAIN01,list: [ ] }
+#    - { model: BEIJING_MR,element: RAIN03,list: [ ] }
+#    - { model: BEIJING_MR,element: RAIN06,list: [ ] }
+#    - { model: BEIJING_MR,element: RAIN12,list: [ ] }
+#    - { model: BEIJING_MR,element: RAIN24,list: [ ] }
+#    - { model: BEIJING_MR,element: TMP,list: [ TMP/2M_ABOVE_GROUND ] }
+#    - { model: BEIJING_MR,element: RH,list: [ RH/2M_ABOVE_GROUND ] }
+#    - { model: BEIJING_MR,element: VIS,list: [ ] }
+#    - { model: BEIJING_MR,element: UGRD,list: [ UGRD/10M_ABOVE_GROUND ] }
+#    - { model: BEIJING_MR,element: VGRD,list: [ VGRD/10M_ABOVE_GROUND ] }
+#    - { model: BEIJING_MR,element: TCDC,list: [ TCDC/ENTIRE_ATMOSPHERE] }
+#
+#    - { model: NCEP_GFS_HR,element: RAIN01,list: [ ] }
+#    - { model: NCEP_GFS_HR,element: RAIN03,list: [ ] }
+#    - { model: NCEP_GFS_HR,element: RAIN06,list: [ ] }
+#    - { model: NCEP_GFS_HR,element: RAIN12,list: [ ] }
+#    - { model: NCEP_GFS_HR,element: RAIN24,list: [ ] }
+#    - { model: NCEP_GFS_HR,element: TMP,list: [ TMP/2M_ABOVE_GROUND ] }
+#    - { model: NCEP_GFS_HR,element: RH,list: [ RH/2M_ABOVE_GROUND ] }
+#    - { model: NCEP_GFS_HR,element: VIS,list: [ ] }
+#    - { model: NCEP_GFS_HR,element: UGRD,list: [ UGRD/10M_ABOVE_GROUND,UGRD/800 ] }
+#    - { model: NCEP_GFS_HR,element: VGRD,list: [ VGRD/10M_ABOVE_GROUND,VGRD/800 ] }
+#    - { model: NCEP_GFS_HR,element: TCDC,list: [ TCDC/ENTIRE_ATMOSPHERE] }
+#    - { model: NCEP_GFS_HR,element: LCDC,list: [ TCDC/LOW_CLOUD] }
+
+
