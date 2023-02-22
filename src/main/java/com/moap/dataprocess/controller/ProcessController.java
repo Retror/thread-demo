@@ -236,7 +236,6 @@ public class ProcessController {
                     for (int i = 0; i < futureList.size(); i++) {
                         Future<NormalData> dataFuture = futureList.get(i);
                         NormalData normalData = dataFuture.get();
-                        System.out.println("1111");
                         //todo 1.如何记录position位置
                         //todo 2.如何写入大数据文件
                         int x = normalData.data[0].length;
